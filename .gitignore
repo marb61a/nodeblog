@@ -1,0 +1,2 @@
+#Ignore mongo data directory
+data/*
