@@ -16,7 +16,7 @@ var users = require('./routes/users');
 
 var app = express();
 
-// view engine setup
+// Setup the view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -95,7 +95,7 @@ if (app.get('env') === 'development') {
 }
 
 // production error handler
-// no stacktraces leaked to user
+// no stacktraces will be leaked to the user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
