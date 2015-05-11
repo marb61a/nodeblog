@@ -16,6 +16,9 @@ var users = require('./routes/users');
 
 var app = express();
 
+// Moment hadles date formatting
+app.locals.moment = require('moment');
+
 // Setup the view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
