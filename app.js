@@ -17,6 +17,8 @@ var categories = require('./routes/categories');
 
 var app = express();
 
+app.listen(process.env.PORT, process.env.IP);
+
 
 // Moment hadles date formatting
 app.locals.moment = require('moment');
