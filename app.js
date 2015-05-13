@@ -21,6 +21,12 @@ var app = express();
 // Moment hadles date formatting
 app.locals.moment = require('moment');
 
+// Stops full posts being seen on index page
+app.locals.truncateText = function(text, length){
+  var truncatedText = text.substring(0, length);
+  return truncatedText;
+}
+
 // Setup the view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
